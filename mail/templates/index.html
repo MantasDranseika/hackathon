@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Custom Choose File</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<form action = "http://localhost:5000/send" method = "POST" enctype = "multipart/form-data">
+<div class="file-upload">
+  <div class="file-select">
+    <div class="file-select-button" id="fileName">Choose File</div>
+    <div class="file-select-name" id="noFile">No file chosen...</div> 
+    <input type="file" name="file" id="chooseFile" accept=".docx" onchange="javascript:this.form.submit();">
+  </div>
+</div>
+</form>
+<!-- partial -->
+  <script  src="{{ url_for('static', filename='script.js')}}"></script>
+
+</body>
+</html>
